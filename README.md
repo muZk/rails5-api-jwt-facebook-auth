@@ -14,7 +14,7 @@ It uses [Knock](https://github.com/nsarno/knock), which [doesn't provide multipl
 
 1) Configure figaro:
 
-        cp config/application.yml.sample config/application.yml
+    cp config/application.yml.sample config/application.yml
 
 2) Create a facebook application:
 
@@ -30,10 +30,11 @@ It uses [Knock](https://github.com/nsarno/knock), which [doesn't provide multipl
     _Note_: App ID is **FB_APP_ID**, App Secret is **FB_SECRET_KEY**
     
     For example:
-        
+```yaml
         # config/application.yml
         FB_APP_ID: 'fb app id'
         FB_SECRET_KEY: 'fb secret key'
+```
 
 - Click on the *Settings* tab in the left nav, then click on **+ Add Platform**
 - Select **Website**
@@ -86,6 +87,7 @@ Head to [Facebook Login for the Web with the JavaScript SDK >>](https://develope
 
 The ```statusChangeCallback``` function is called with the results of a login attempt. You can access to the user access token in this function:
 
+```js
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
         if (response.status === 'connected') {
@@ -100,3 +102,4 @@ The ```statusChangeCallback``` function is called with the results of a login at
                 })
         }
     }
+```
